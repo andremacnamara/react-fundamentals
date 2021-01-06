@@ -31,11 +31,47 @@
     // ReactDOM.render(reactElement, rootElement);
     
     // React.createElement takes are object and creates a DOM Node.
+    
 
-    const element = React.createElement('div', {
-      className: 'container',
-      children: 'Welcome'
-    });
+    // MAIN WORK
+    
+    // const element = React.createElement('div', 
+    //   {
+    //     className: 'container',
+    //     children: 'Hello World'
+    //   }
+    // );
+
+    // Extra Credit
+
+    // const element = React.createElement('div', 
+    //   {
+    //     className: 'container',
+    //   },
+    //   React.createElement('span', 
+    //   {
+    //     children: 'Hello'
+    //   }),
+    //   React.createElement('span', 
+    //   {
+    //     children: 'World'
+    //   })
+    // );
+
+    // Take 2
+
+    const helloElement = React.createElement('span', {}, 'Hello');
+    const worldElement = React.createElement('span', {}, 'World');
+
+    const element = React.createElement(
+      'div',
+      {
+        className: 'container'
+      },
+      helloElement,
+      ' ',
+      worldElement
+    )
 
     ReactDOM.render(element, rootElement);
 
